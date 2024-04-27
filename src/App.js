@@ -1,23 +1,52 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import './App.css';
+import Header from './components/Navbar.js'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ArtArticle from './components/Cards.js';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Footer from './components/Footer.js'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header/>
+      <div className='welcome'>
+        <h1>Welcome to my Flipboard Reinvisioned Replica!</h1>
+      </div>
+      <div className='ArtCards'>
+      <Container>
+      <Row>
+        <Col xs>   <ArtArticle/></Col>
+        <Col xs={{ order: 12 }}> <ArtArticle/></Col>
+        <Col xs={{ order: 1 }}> <ArtArticle/></Col>
+      </Row>
+    </Container>
+    <Container>
+      <Row>
+        <Col xs>   <ArtArticle/></Col>
+        <Col xs={{ order: 12 }}> <ArtArticle/></Col>
+        <Col xs={{ order: 1 }}> <ArtArticle/></Col>
+      </Row>
+    </Container>
+    <Container>
+      <Row>
+        <Col xs>   <ArtArticle/></Col>
+        <Col xs={{ order: 12 }}> <ArtArticle/></Col>
+        <Col xs={{ order: 1 }}> <ArtArticle/></Col>
+      </Row>
+    </Container>
+    <Container>
+      <Row>
+        <Col xs>   <ArtArticle/></Col>
+        <Col xs={{ order: 12 }}> <ArtArticle/></Col>
+        <Col xs={{ order: 1 }}> <ArtArticle/></Col>
+      </Row>
+    </Container>
+    </div>
+    <Footer/>
     </div>
   );
 }
